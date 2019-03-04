@@ -10,6 +10,7 @@ using namespace sf;
 
 int main()
 {
+	// Set window dimensions
 	int windowWidth = 1024;
 	int windowHeight = 768;
 
@@ -17,10 +18,13 @@ int main()
 
 	int score = 0;
 	int lives = 1;
-
+	
+	// Initialize objects
 	Bat bat(windowWidth * .66, windowHeight - 20);
 	Bat bat2(windowWidth / 3, windowHeight - 20); // Second Player
 	Ball ball(windowWidth / 2, 1);
+	
+	// Text to display score
 	Text scoreDisplay;
 	Font font;
 	font.loadFromFile("DS-DIGIT.ttf");
@@ -93,7 +97,8 @@ int main()
 		{
 			ball.collideBatOrTop();
 		}
-
+		
+		// Update objects' positions
 		ball.update();
 		bat.update();
 		bat2.update();
@@ -101,7 +106,8 @@ int main()
 		std::stringstream ss;
 		ss << "Score:" << score;
 		scoreDisplay.setString(ss.str());
-
+		
+		// Draw each object
 		window.clear(Color(26, 0, 0, 255));
 		window.draw(bat.getShape());
 		window.draw(bat2.getShape());
