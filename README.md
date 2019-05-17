@@ -1,2 +1,3 @@
 # 2-Player-Pong-Game
-A Pong clone built in the SFML library in C++ where I added a second player. One player can use the arrow keys and another could use WASD.
+A Pong clone built in the SFML library in C++ with an added second player where they work as a team. 
+Player 1 uses WASD keys, Player 2 uses arrow keys.
